@@ -1,0 +1,22 @@
+﻿<Window
+    x:Class="WpfDashboard_DashboardState.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="800"
+    Height="600"
+    mc:Ignorable="d"
+    Title="MainWindow" Closing="Window_Closing">
+
+    <Grid>
+        <dxdash:DashboardControl
+            x:Name="dashboardControl"
+            MinHeight="150"
+            DashboardLoaded="dashboardControl_DashboardLoaded"
+            DashboardSource="SampleDashboardWithState.xml"
+            SetInitialDashboardState="dashboardControl_SetInitialDashboardState"/>
+    </Grid>
+
+</Window>
