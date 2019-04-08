@@ -39,5 +39,11 @@ namespace WpfDashboard_DashboardState
             dashboardControl.Dashboard.UserData = userData;
             dashboardControl.Dashboard.SaveToXml("SampleDashboardWithState.xml");
         }
+
+        private void DashboardControl_ConfigureDataConnection(object sender, DashboardConfigureDataConnectionEventArgs e)
+        {
+            ExtractDataSourceConnectionParameters connParams = e.ConnectionParameters as ExtractDataSourceConnectionParameters;
+            connParams.FileName = "Data\\SalesPerson.dat";
+        }
     }
 }

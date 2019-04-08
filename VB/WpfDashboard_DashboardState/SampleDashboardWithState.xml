@@ -3,7 +3,7 @@
   <Title Text="Dashboard" />
   <DataSources>
     <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="Extract Data Source 1">
-      <FileName>Data\NWind_SalesPerson.dat</FileName>
+      <FileName>Data\SalesPerson.dat</FileName>
       <Parameters />
     </ExtractFileDataSource>
   </DataSources>
@@ -13,7 +13,7 @@
       <DataItems>
         <Dimension DataMember="CategoryName" DefaultId="DataItem0" />
         <Dimension DataMember="ProductName" DefaultId="DataItem1" />
-        <Measure DataMember="ExtendedPrice" DefaultId="DataItem2" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem2" />
         <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem3" />
       </DataItems>
       <GridColumns>
@@ -35,7 +35,7 @@
     <Chart ComponentName="chartDashboardItem1" Name="Sales by Date" DataSource="dashboardExtractDataSource1">
       <InteractivityOptions MasterFilterMode="Single" />
       <DataItems>
-        <Measure DataMember="ExtendedPrice" DefaultId="DataItem0" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
         <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
@@ -54,7 +54,7 @@
     </Chart>
     <Treemap ComponentName="treemapDashboardItem1" Name="Treemap 1" DataSource="dashboardExtractDataSource1">
       <DataItems>
-        <Measure DataMember="ExtendedPrice" DefaultId="DataItem0" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
         <Dimension DataMember="CategoryName" GroupChildValues="true" DefaultId="DataItem2" />
         <Dimension DataMember="ProductName" DefaultId="DataItem1" />
         <Measure DataMember="Quantity" DefaultId="DataItem3" />
@@ -80,8 +80,8 @@
   </LayoutTree>
   <UserData>
     <Root>
-      <DateModified>2018-08-16T18:43:48.4789675+03:00</DateModified>
-      <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;DrillDown&gt;&lt;Value Type="System.String" Value="Beverages" /&gt;&lt;/DrillDown&gt;&lt;/Item&gt;&lt;Item Name="chartDashboardItem1"&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.DateTime" Value="1998-04-01T00:00:00.0000000" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;/Item&gt;&lt;Item Name="treemapDashboardItem1" LayerIndex="1" /&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
+      <DateModified>2019-04-08T18:43:48.4789675+01:00</DateModified>
+      <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;DrillDown&gt;&lt;Value Type="System.String" Value="Beverages" /&gt;&lt;/DrillDown&gt;&lt;/Item&gt;&lt;Item Name="chartDashboardItem1"&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.DateTime" Value="2016-04-01T00:00:00.0000000" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;/Item&gt;&lt;Item Name="treemapDashboardItem1" LayerIndex="1" /&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
     </Root>
   </UserData>
 </Dashboard>
