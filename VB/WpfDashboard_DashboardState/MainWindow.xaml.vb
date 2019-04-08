@@ -29,7 +29,7 @@ Namespace WpfDashboard_DashboardState
 		End Sub
 		Private Sub Window_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs)
 			dState = dashboardControl.GetDashboardState()
-			Dim userData As New XElement("Root", New XElement("DateModified", Date.Now), New XElement("DashboardState", dState.SaveToXml().ToString(SaveOptions.DisableFormatting)))
+			Dim userData As New XElement("Root", New XElement("DateModified", DateTime.Now), New XElement("DashboardState", dState.SaveToXml().ToString(SaveOptions.DisableFormatting)))
 			dashboardControl.Dashboard.UserData = userData
 			dashboardControl.Dashboard.SaveToXml("SampleDashboardWithState.xml")
 		End Sub
