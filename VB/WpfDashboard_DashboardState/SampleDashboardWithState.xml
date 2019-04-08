@@ -78,10 +78,4 @@
       <LayoutItem DashboardItem="treemapDashboardItem1" Weight="49.938949938949939" />
     </LayoutGroup>
   </LayoutTree>
-  <UserData>
-    <Root>
-      <DateModified>2019-04-08T18:43:48.4789675+01:00</DateModified>
-      <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;DrillDown&gt;&lt;Value Type="System.String" Value="Beverages" /&gt;&lt;/DrillDown&gt;&lt;/Item&gt;&lt;Item Name="chartDashboardItem1"&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.DateTime" Value="2016-04-01T00:00:00.0000000" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;/Item&gt;&lt;Item Name="treemapDashboardItem1" LayerIndex="1" /&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
-    </Root>
-  </UserData>
 </Dashboard>
