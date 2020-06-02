@@ -10,33 +10,36 @@ namespace WpfDashboard_DashboardState
     /// </summary>
     public partial class MainWindow : Window
     {
-        DashboardState dState = new DashboardState();
+        public static readonly string PropertyName = "DashboardState";
+       
         public MainWindow()
         {
             InitializeComponent();
 
         }
-        private void dashboardControl_DashboardLoaded(object sender, DevExpress.DashboardWpf.DashboardLoadedEventArgs e)
-        {
-            XElement data = e.Dashboard.UserData;
-            if (data != null)
-            {
-                if (data.Element("DashboardState") != null)
-                {
-                    
-                    dState.LoadFromXml(XDocument.Parse(data.Element("DashboardState").Value));
-                }
+       
+        DashboardState GetDataFromString(string customPropertyValue) {
+            DashboardState dState = new DashboardState();
+            if(!string.IsNullOrEmpty(customPropertyValue)) {
+                var xmlStateEl = XDocument.Parse(customPropertyValue);
+                dState.LoadFromXml(xmlStateEl);
             }
+            return dState;
+        }
+
+        private void dashboardControl_DashboardLoaded(object sender, DevExpress.DashboardWpf.DashboardLoadedEventArgs e) {
+
         }
         private void dashboardControl_SetInitialDashboardState(object sender, DevExpress.DashboardWpf.SetInitialDashboardStateWpfEventArgs e)
         {
-            e.InitialState = dState;
+            var state = GetDataFromString(dashboardControl.Dashboard.CustomProperties.GetValue(PropertyName));
+            e.InitialState = state;
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            dState = dashboardControl.GetDashboardState();
-            XElement userData = new XElement("Root", new XElement("DateModified", DateTime.Now), new XElement("DashboardState", dState.SaveToXml().ToString(SaveOptions.DisableFormatting)));
-            dashboardControl.Dashboard.UserData = userData;
+            var dState = dashboardControl.GetDashboardState();
+            var stateValue = dState.SaveToXml().ToString(SaveOptions.DisableFormatting);
+            dashboardControl.Dashboard.CustomProperties.SetValue("DashboardState", stateValue);
             dashboardControl.Dashboard.SaveToXml("SampleDashboardWithState.xml");
         }
 

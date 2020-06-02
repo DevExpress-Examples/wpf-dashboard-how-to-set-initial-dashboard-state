@@ -10,27 +10,30 @@ Namespace WpfDashboard_DashboardState
 	Partial Public Class MainWindow
 		Inherits Window
 
-		Private dState As New DashboardState()
+		Public Shared ReadOnly PropertyName As String = "DashboardState"
 		Public Sub New()
 			InitializeComponent()
 
 		End Sub
-		Private Sub dashboardControl_DashboardLoaded(ByVal sender As Object, ByVal e As DevExpress.DashboardWpf.DashboardLoadedEventArgs)
-			Dim data As XElement = e.Dashboard.UserData
-			If data IsNot Nothing Then
-				If data.Element("DashboardState") IsNot Nothing Then
-					Dim dStateDocument As XDocument = XDocument.Parse(data.Element("DashboardState").Value)
-					dState.LoadFromXml(XDocument.Parse(data.Element("DashboardState").Value))
-				End If
+		Private Function GetDataFromString(ByVal customPropertyValue As String) As DashboardState
+			Dim dState As New DashboardState()
+			If (Not String.IsNullOrEmpty(customPropertyValue)) Then
+				Dim xmlStateEl = XDocument.Parse(customPropertyValue)
+				dState.LoadFromXml(xmlStateEl)
 			End If
+			Return dState
+		End Function
+		Private Sub dashboardControl_DashboardLoaded(ByVal sender As Object, ByVal e As DevExpress.DashboardWpf.DashboardLoadedEventArgs)
+
 		End Sub
 		Private Sub dashboardControl_SetInitialDashboardState(ByVal sender As Object, ByVal e As DevExpress.DashboardWpf.SetInitialDashboardStateWpfEventArgs)
-			e.InitialState = dState
+			Dim state = GetDataFromString(dashboardControl.Dashboard.CustomProperties.GetValue(PropertyName))
+			e.InitialState = state
 		End Sub
 		Private Sub Window_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs)
-			dState = dashboardControl.GetDashboardState()
-			Dim userData As New XElement("Root", New XElement("DateModified", DateTime.Now), New XElement("DashboardState", dState.SaveToXml().ToString(SaveOptions.DisableFormatting)))
-			dashboardControl.Dashboard.UserData = userData
+			Dim dState = dashboardControl.GetDashboardState()
+			Dim stateValue = dState.SaveToXml().ToString(SaveOptions.DisableFormatting)
+			dashboardControl.Dashboard.CustomProperties.SetValue("DashboardState", stateValue)
 			dashboardControl.Dashboard.SaveToXml("SampleDashboardWithState.xml")
 		End Sub
 
