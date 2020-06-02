@@ -23,7 +23,7 @@ namespace WpfDashboard_DashboardState
             {
                 if (data.Element("DashboardState") != null)
                 {
-                    XDocument dStateDocument = XDocument.Parse(data.Element("DashboardState").Value);
+                    
                     dState.LoadFromXml(XDocument.Parse(data.Element("DashboardState").Value));
                 }
             }
