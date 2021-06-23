@@ -5,7 +5,7 @@
 * [MainWindow.xaml](./CS/WpfDashboard_DashboardState/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfDashboard_DashboardState/MainWindow.xaml))
 <!-- default file list end -->
 
-# How to Set the Initial Dashboard State
+# Dashboard for WPF - How to Set the Initial Dashboard State
 
 This example demonstrates how to manage dashboard state to save and restore selected master filters values, current drill-down levels and other parameters such as Treemap layers.
 
