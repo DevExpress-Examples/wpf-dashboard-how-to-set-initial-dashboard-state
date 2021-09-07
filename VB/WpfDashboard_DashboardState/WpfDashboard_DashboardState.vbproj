@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{34E86D9E-2CC4-46C9-B3D5-A8483D94747B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>WpfDashboard_DashboardState</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <TargetFrameworkProfile />
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
+    <BaseIntermediateOutputPath>obj.NetFX</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,33 +58,33 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Sparkline.v20.1.Core" />
-    <Reference Include="DevExpress.Dashboard.v20.1.Core" />
-    <Reference Include="DevExpress.Dashboard.v20.1.Wpf" />
-    <Reference Include="DevExpress.Data.v20.1" />
-    <Reference Include="DevExpress.DataAccess.v20.1" />
-    <Reference Include="DevExpress.Map.v20.1.Core" />
-    <Reference Include="DevExpress.Mvvm.v20.1" />
-    <Reference Include="DevExpress.Printing.v20.1.Core" />
-    <Reference Include="DevExpress.PivotGrid.v20.1.Core" />
-    <Reference Include="DevExpress.Office.v20.1.Core" />
-    <Reference Include="DevExpress.RichEdit.v20.1.Core" />
-    <Reference Include="DevExpress.Xpf.Charts.v20.1" />
-    <Reference Include="DevExpress.Data.Desktop.v20.1" />
-    <Reference Include="DevExpress.Xpf.Core.v20.1" />
-    <Reference Include="DevExpress.Xpf.LayoutControl.v20.1" />
-    <Reference Include="DevExpress.Xpf.Dashboard.v20.1" />
-    <Reference Include="DevExpress.Xpf.Docking.v20.1" />
-    <Reference Include="DevExpress.Xpf.Printing.v20.1" />
-    <Reference Include="DevExpress.Xpf.Grid.v20.1" />
-    <Reference Include="DevExpress.Xpf.Grid.v20.1.Core" />
-    <Reference Include="DevExpress.Xpf.Map.v20.1" />
-    <Reference Include="DevExpress.Xpf.PivotGrid.v20.1" />
-    <Reference Include="DevExpress.Xpf.PropertyGrid.v20.1" />
-    <Reference Include="DevExpress.Xpf.Office.v20.1" />
-    <Reference Include="DevExpress.Xpf.RichEdit.v20.1" />
-    <Reference Include="DevExpress.Xpf.TreeMap.v20.1" />
-    <Reference Include="DevExpress.Xpo.v20.1" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Core" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Wpf" />
+    <Reference Include="DevExpress.Data.v21.1" />
+    <Reference Include="DevExpress.DataAccess.v21.1" />
+    <Reference Include="DevExpress.Map.v21.1.Core" />
+    <Reference Include="DevExpress.Mvvm.v21.1" />
+    <Reference Include="DevExpress.Printing.v21.1.Core" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core" />
+    <Reference Include="DevExpress.Office.v21.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core" />
+    <Reference Include="DevExpress.Xpf.Charts.v21.1" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1" />
+    <Reference Include="DevExpress.Xpf.Core.v21.1" />
+    <Reference Include="DevExpress.Xpf.LayoutControl.v21.1" />
+    <Reference Include="DevExpress.Xpf.Dashboard.v21.1" />
+    <Reference Include="DevExpress.Xpf.Docking.v21.1" />
+    <Reference Include="DevExpress.Xpf.Printing.v21.1" />
+    <Reference Include="DevExpress.Xpf.Grid.v21.1" />
+    <Reference Include="DevExpress.Xpf.Grid.v21.1.Core" />
+    <Reference Include="DevExpress.Xpf.Map.v21.1" />
+    <Reference Include="DevExpress.Xpf.PivotGrid.v21.1" />
+    <Reference Include="DevExpress.Xpf.PropertyGrid.v21.1" />
+    <Reference Include="DevExpress.Xpf.Office.v21.1" />
+    <Reference Include="DevExpress.Xpf.RichEdit.v21.1" />
+    <Reference Include="DevExpress.Xpf.TreeMap.v21.1" />
+    <Reference Include="DevExpress.Xpo.v21.1" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />

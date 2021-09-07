@@ -1,8 +1,9 @@
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 16
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfDashboard_DashboardState", "WpfDashboard_DashboardState\WpfDashboard_DashboardState.vbproj", "{34E86D9E-2CC4-46C9-B3D5-A8483D94747B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDashboard_DashboardState", "WpfDashboard_DashboardState\WpfDashboard_DashboardState.Net5.csproj", "{34E86D9E-2CC4-46C9-B3D5-A8483D94747B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
