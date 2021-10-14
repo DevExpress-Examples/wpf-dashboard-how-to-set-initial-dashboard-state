@@ -3,12 +3,6 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T830540)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [MainWindow.xaml.cs](./CS/WpfDashboard_DashboardState/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfDashboard_DashboardState/MainWindow.xaml.vb))
-* [MainWindow.xaml](./CS/WpfDashboard_DashboardState/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfDashboard_DashboardState/MainWindow.xaml))
-<!-- default file list end -->
 
 # Dashboard for WPF - How to Set the Initial Dashboard State
 
@@ -19,6 +13,13 @@ This example demonstrates how to manage dashboard state to save and restore sele
 When the main window closes, the [DashboardControl.GetDashboardState](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWpf.DashboardControl.GetDashboardState) obtains a dashboard state object. It is serialized to XML and added to the **XElement** object stored  stored in the [CustomProperties](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.Dashboard.CustomProperties) collection. Subsequently the dashboard with the dashboard state data is saved to a file.
 
 When the application starts, the DashboardControl loads the dashboard and the [DashboardState](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardState) object is deserialized and restored using the **GetDataFromString** method in the [DashboardControl.SetInitialDashboardState](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWpf.DashboardControl.SetInitialDashboardState) event handler.
+
+<!-- default file list -->
+## Files to look at
+
+* [MainWindow.xaml.cs](./CS/WpfDashboard_DashboardState/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfDashboard_DashboardState/MainWindow.xaml.vb))
+* [MainWindow.xaml](./CS/WpfDashboard_DashboardState/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfDashboard_DashboardState/MainWindow.xaml))
+<!-- default file list end -->
 
 ## Documentation
 
